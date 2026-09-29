@@ -44,7 +44,7 @@ if (file_exists($rate_limit_file)) {
     $last_request = (int) file_get_contents($rate_limit_file);
     if ($now - $last_request < 10) { // 10 second cooldown per IP
         http_response_code(429);
-        echo json_encode(['error' => 'Zbyt wiele prób. Spróbuj za chwilę.']);
+        echo json_encode(['error' => 'Too many attempts. Try again later.']);
         exit;
     }
 }
@@ -56,7 +56,7 @@ $env_path = __DIR__ . '/.env';
 if (!file_exists($env_path)) {
     error_log('PARASOL subscribe: .env file not found at ' . $env_path);
     http_response_code(500);
-    echo json_encode(['error' => 'Błąd konfiguracji serwera.']);
+    echo json_encode(['error' => 'Server configuration error.']);
     exit;
 }
 
@@ -77,7 +77,7 @@ $list_id = (int) ($env['BREVO_LIST_ID'] ?? 2);
 if (empty($api_key)) {
     error_log('PARASOL subscribe: BREVO_API_KEY not set in .env');
     http_response_code(500);
-    echo json_encode(['error' => 'Błąd konfiguracji serwera.']);
+    echo json_encode(['error' => 'Server configuration error.']);
     exit;
 }
 
@@ -87,7 +87,7 @@ $email = isset($input['email']) ? trim(strtolower($input['email'])) : '';
 
 if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     http_response_code(400);
-    echo json_encode(['error' => 'Nieprawidłowy adres email.']);
+    echo json_encode(['error' => 'Invalid email address.']);
     exit;
 }
 
@@ -120,7 +120,7 @@ curl_close($ch);
 if ($curl_error) {
     error_log('PARASOL subscribe curl error: ' . $curl_error);
     http_response_code(502);
-    echo json_encode(['error' => 'Nie udało się połączyć z serwisem. Spróbuj ponownie.']);
+    echo json_encode(['error' => 'Could not connect to service. Try again.']);
     exit;
 }
 
@@ -128,17 +128,17 @@ $brevo_response = json_decode($response, true);
 
 // 201 = created, 204 = updated (updateEnabled)
 if ($http_code === 201 || $http_code === 204) {
-    echo json_encode(['success' => true, 'message' => 'Zapisano!']);
+    echo json_encode(['success' => true, 'message' => 'Subscribed!']);
     exit;
 }
 
 // Contact already exists and is in the list — Brevo returns "duplicate_parameter"
 if ($http_code === 400 && isset($brevo_response['code']) && $brevo_response['code'] === 'duplicate_parameter') {
-    echo json_encode(['success' => true, 'message' => 'Już jesteś na liście!', 'duplicate' => true]);
+    echo json_encode(['success' => true, 'message' => 'Already on the list!', 'duplicate' => true]);
     exit;
 }
 
 // Unexpected error
 error_log('PARASOL subscribe Brevo error: HTTP ' . $http_code . ' — ' . $response);
 http_response_code(502);
-echo json_encode(['error' => 'Wystąpił problem. Spróbuj ponownie za chwilę.']);
+echo json_encode(['error' => 'An error occurred. Try again later.']);

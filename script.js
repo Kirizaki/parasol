@@ -9,39 +9,6 @@
 (function () {
   'use strict';
 
-  // ---------- Nav: show after scrolling past hero ----------
-  const initNav = () => {
-    const nav = document.getElementById('nav');
-    const hero = document.getElementById('hero');
-    const scrollHint = document.getElementById('scroll-hint');
-    if (!nav || !hero) return;
-
-    let ticking = false;
-
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const heroBottom = hero.offsetHeight * 0.6;
-        const scrolled = window.scrollY;
-
-        // Show nav after scrolling past ~60% of hero
-        nav.classList.toggle('nav--visible', scrolled > heroBottom);
-        nav.classList.toggle('nav--scrolled', scrolled > heroBottom);
-
-        // Fade scroll hint
-        if (scrollHint) {
-          scrollHint.style.opacity = Math.max(0, 1 - scrolled / 300);
-        }
-
-        ticking = false;
-      });
-    };
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  };
-
   // ---------- Tab Switching ----------
   const initTabs = () => {
     const tabs = document.querySelectorAll('.nav__tab');
@@ -271,7 +238,6 @@
   // ---------- Init ----------
   document.addEventListener('DOMContentLoaded', () => {
     addShakeKeyframe();
-    initNav();
     initTabs();
     initReveal();
     initSignup();

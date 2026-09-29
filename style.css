@@ -100,20 +100,7 @@ button {
   align-items: center;
   padding: 0 var(--s4);
   height: var(--nav-h);
-  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-.nav--visible {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.nav--scrolled {
   background: var(--bg-nav);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 var(--rule-light);
 }
 
