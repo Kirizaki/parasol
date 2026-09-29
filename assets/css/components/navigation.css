@@ -1,0 +1,78 @@
+/* ---------- Navigation ---------- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--s4);
+  height: var(--nav-h);
+  background: var(--bg-nav);
+  box-shadow: 0 1px 0 var(--rule-light);
+}
+
+.nav__brand {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid var(--rule);
+  transition: border-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.nav__brand:hover {
+  border-color: var(--ink-muted);
+}
+
+.nav__logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav__tabs {
+  display: flex;
+  gap: var(--s1);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav__tab {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  padding: 0.4rem 0.8rem;
+  border-radius: 3px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.nav__tab:hover {
+  color: var(--ink-soft);
+}
+
+.nav__tab--active {
+  color: var(--ink);
+  background: var(--bg-card);
+}
+
+.nav__cta {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  transition: color 0.2s ease;
+}
+
+.nav__cta:hover {
+  color: var(--ink);
+}

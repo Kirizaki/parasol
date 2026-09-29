@@ -1,0 +1,119 @@
+/* ---------- Email Signup ---------- */
+.signup {
+  padding: var(--s7) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.signup__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s6);
+  align-items: center;
+}
+
+.signup__heading {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: var(--s2);
+}
+
+.signup__text {
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  max-width: 26rem;
+}
+
+.signup__input-group {
+  display: flex;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+  background: #fff;
+}
+
+.signup__input-group:focus-within {
+  border-color: var(--ink-soft);
+}
+
+.signup__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--ink);
+  outline: none;
+  min-width: 0;
+}
+
+.signup__input::placeholder {
+  color: var(--ink-faint);
+}
+
+.signup__button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.85rem 1.4rem;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+
+.signup__button:hover {
+  background: var(--ink-soft);
+}
+
+.signup__button-arrow {
+  width: 14px;
+  height: 14px;
+}
+
+.signup__disclaimer {
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  margin-top: var(--s2);
+}
+
+/* Success state */
+.signup__success {
+  text-align: center;
+  padding: var(--s4);
+}
+
+.signup__success-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--s2);
+}
+
+.signup__success-title {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: var(--s1);
+}
+
+.signup__success-text {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}

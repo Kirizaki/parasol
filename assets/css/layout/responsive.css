@@ -1,0 +1,105 @@
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .nav__tabs {
+    position: relative;
+    left: auto;
+    transform: none;
+  }
+
+  .nav__cta {
+    display: none;
+  }
+
+  .hero {
+    min-height: 80vh;
+    padding: var(--s6) var(--s3) var(--s5);
+  }
+
+  .hero__wordmark {
+    max-width: 90vw;
+  }
+
+  .archive__card {
+    grid-template-columns: 48px 1fr 28px;
+    gap: var(--s2);
+    padding: var(--s3) 0;
+  }
+
+  .archive__card--featured {
+    padding: var(--s4) var(--s3);
+  }
+
+  .press-about {
+    grid-template-columns: 1fr;
+    gap: var(--s3);
+  }
+
+  .press-projects {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .press-project {
+    padding: var(--s3) 0;
+  }
+
+  .press-team {
+    grid-template-columns: 1fr;
+  }
+
+  .press-downloads {
+    flex-direction: column;
+  }
+
+  .signup__wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--s4);
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--s3);
+  }
+}
+
+@media (max-width: 480px) {
+  .signup__input-group {
+    flex-direction: column;
+  }
+
+  .signup__button {
+    justify-content: center;
+    padding: 0.9rem;
+  }
+
+  .archive__card:hover {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .archive__card--featured {
+    margin: 0;
+    border-radius: 4px;
+  }
+
+  .press-member {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--s4) var(--s3);
+  }
+
+  .issue-detail__header {
+    flex-direction: column;
+    gap: var(--s2);
+  }
+
+  .issue-detail__number {
+    font-size: 3rem;
+  }
+}

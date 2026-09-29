@@ -51,7 +51,7 @@ if (file_exists($rate_limit_file)) {
 file_put_contents($rate_limit_file, $now);
 
 // ---------- Load .env ----------
-$env_path = __DIR__ . '/.env';
+$env_path = __DIR__ . '/../.env';
 
 if (!file_exists($env_path)) {
     error_log('PARASOL subscribe: .env file not found at ' . $env_path);

@@ -1,0 +1,206 @@
+/* ---------- Issue Detail View ---------- */
+.issue-detail {
+  animation: panelFadeIn 0.35s ease;
+  padding-bottom: var(--s6);
+}
+
+.issue-detail__back {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  padding: var(--s1) 0;
+  margin-bottom: var(--s5);
+  transition: color 0.2s ease;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.issue-detail__back:hover {
+  color: var(--ink);
+}
+
+.issue-detail__header {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--s4);
+  margin-bottom: var(--s6);
+  padding-bottom: var(--s4);
+  border-bottom: 1px solid var(--rule);
+}
+
+.issue-detail__number {
+  font-family: var(--font-mono);
+  font-size: clamp(3.5rem, 8vw, 5rem);
+  font-weight: 300;
+  line-height: 0.85;
+  color: var(--rule);
+  letter-spacing: -0.03em;
+  flex-shrink: 0;
+}
+
+.issue-detail__date {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.issue-detail__title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.issue-detail__content {
+  max-width: 680px;
+}
+
+.issue-detail__section {
+  padding: var(--s4) 0;
+}
+
+.issue-detail__lead {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: var(--s2);
+}
+
+.issue-detail__content p {
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  margin-bottom: var(--s2);
+}
+
+.issue-detail__content p:last-child {
+  margin-bottom: 0;
+}
+
+.issue-detail__subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: var(--s2);
+  letter-spacing: -0.01em;
+}
+
+.issue-detail__divider {
+  height: 1px;
+  background: var(--rule-light);
+  margin: 0;
+}
+
+.issue-detail__quote {
+  font-family: var(--font-sans);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--ink);
+  padding: var(--s4) 0;
+  padding-left: var(--s4);
+  border-left: 3px solid var(--ink);
+  margin: 0;
+}
+
+.issue-detail__quote cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: var(--s2);
+}
+
+.issue-detail__small {
+  font-size: 0.8rem !important;
+  color: var(--ink-muted) !important;
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.issue-detail__lineup {
+  margin-top: var(--s3);
+  padding: var(--s3);
+  background: var(--bg-card);
+  border-radius: 4px;
+}
+
+.issue-detail__lineup h4 {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: var(--s2);
+}
+
+.issue-detail__lineup ul {
+  list-style: none;
+  padding: 0;
+}
+
+.issue-detail__lineup li {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  padding: 3px 0;
+  border-bottom: 1px solid var(--rule-light);
+}
+
+.issue-detail__lineup li:last-child {
+  border-bottom: none;
+}
+
+.issue-detail__cta-row {
+  display: flex;
+  gap: var(--s2);
+  padding: var(--s5) 0 var(--s3);
+}
+
+.issue-detail__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+.issue-detail__cta:hover {
+  background: var(--ink-soft);
+}
+
+.issue-detail__cta--outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--rule);
+}
+
+.issue-detail__cta--outline:hover {
+  background: var(--bg-card);
+  border-color: var(--ink-muted);
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "5",
+    "number": "05",
+    "label": "Latest Issue \u00b7 Sep 14, 2026",
+    "title": "MAYDAY MAYDAY MAYDAY",
+    "excerpt": "BA\u0141TYK \u2014 Artur Bieszke's first electronic solo piece. Aquatic breakbeats and glitchy soundscapes.",
+    "featured": true
+  },
+  {
+    "id": "4",
+    "number": "04",
+    "label": "Issue \u00b7 Aug 16, 2026",
+    "title": "Here we go yo!",
+    "excerpt": "Usual Suspects Vol.002 \u2014 a trance-like, afro-rock fusion speeding into the dark.",
+    "featured": false
+  },
+  {
+    "id": "3",
+    "number": "03",
+    "label": "Issue \u00b7 Aug 8, 2026",
+    "title": "The Best Jazz on Bandcamp, July 2026",
+    "excerpt": "Usual Suspects Vol.001 hits Bandcamp's Best Jazz list. Dave Sumner's spotlight review.",
+    "featured": false
+  },
+  {
+    "id": "2",
+    "number": "02",
+    "label": "Issue \u00b7 Jul 1, 2026",
+    "title": "Pick it up, pick it up, pick it up!",
+    "excerpt": "Usual Suspects Vol.001 drops \u2014 spontaneous improvisation recorded live on Revox A77.",
+    "featured": false
+  },
+  {
+    "id": "1",
+    "number": "01",
+    "label": "First Issue \u00b7 May 8, 2026",
+    "title": "TEST \u2014 PIERWSZY RZUT!",
+    "excerpt": "The inaugural dispatch. Chiaroscuro Sessions launch with JUTRA's private premiere.",
+    "featured": false
+  }
+]

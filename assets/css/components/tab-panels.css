@@ -1,0 +1,18 @@
+/* ---------- Tab Panels ---------- */
+.main-content {
+  padding-top: var(--s5);
+}
+
+.tab-panel {
+  display: none;
+  animation: panelFadeIn 0.4s ease;
+}
+
+.tab-panel--active {
+  display: block;
+}
+
+@keyframes panelFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

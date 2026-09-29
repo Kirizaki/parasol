@@ -1,0 +1,70 @@
+/* ---------- Footer ---------- */
+.footer {
+  padding: var(--s6) 0 var(--s4);
+  border-top: 1px solid var(--rule);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: var(--s6);
+  padding-bottom: var(--s4);
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+}
+
+.footer__logo {
+  display: block;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid var(--rule);
+  flex-shrink: 0;
+}
+
+.footer__tagline {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer__links-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 4px;
+}
+
+.footer__link {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  transition: color 0.15s ease;
+}
+
+.footer__link:hover {
+  color: var(--ink);
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--rule-light);
+  padding-top: var(--s2);
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+}

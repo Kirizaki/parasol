@@ -1,0 +1,4 @@
+/* ---------- Archive card clickable ---------- */
+.archive__card {
+  cursor: pointer;
+}

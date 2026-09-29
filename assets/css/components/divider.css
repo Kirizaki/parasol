@@ -1,0 +1,9 @@
+/* ---------- Divider ---------- */
+.divider {
+  padding: 0;
+}
+
+.divider__line {
+  height: 1px;
+  background: var(--rule);
+}
